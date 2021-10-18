@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/hard_main"
-    tools:context=".screens.start.StartFragment">
+    tools:context=".screens.start.StartFragment"
+    android:background="@color/white">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_note"
+        android:id="@+id/rv_notes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,17 +18,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_layout" />
+        tools:listitem="@layout/item_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:src="@drawable/plus"
-        android:backgroundTint="@color/hard_main"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
